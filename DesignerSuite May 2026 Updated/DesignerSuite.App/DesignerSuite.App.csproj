@@ -39,8 +39,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Modules\QuickDesigner2023\QuickDesigner2023.Module.csproj" />
-		<ProjectReference Include="..\Modules\QuickDesigner2025\QuickDesigner2025.Module.csproj" />
+		<!-- Modules removed for Corel-free lite build -->
 	</ItemGroup>
 
 	<ItemGroup>

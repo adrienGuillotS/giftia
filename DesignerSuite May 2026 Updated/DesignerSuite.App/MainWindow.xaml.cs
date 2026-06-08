@@ -1,10 +1,10 @@
 ﻿using ControlzEx.Theming;
 using MahApps.Metro.Controls;
-using QuickDesinger2023;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MenuItem = DesignerSuite.App.ViewModels.MenuItem;
+using DesignerSuite.App.Pages;
 
 
 namespace DesignerSuite.App
@@ -27,7 +27,7 @@ namespace DesignerSuite.App
             this.HamburgerMenuControl.Content = this.navigationServiceEx.Frame;
 
             // Navigate to the home page.
-            this.Loaded += (sender, args) => this.navigationServiceEx.Navigate(typeof(MainPage));
+            this.Loaded += (sender, args) => this.navigationServiceEx.Navigate(typeof(DashboardPage));
         }
 
         private void HamburgerMenuControl_OnItemInvoked(object sender, HamburgerMenuItemInvokedEventArgs e)
