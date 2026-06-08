@@ -1,0 +1,1 @@
+java -cp lib/* com.skee.pdfprocess.Processor >> process.log

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
+  <Profiles><Profile Name="(Default)" /></Profiles>
+  <Settings>
+    <Setting Name="ZipLocation"        Type="System.String" Scope="User"><Value Profile="(Default)"></Value></Setting>
+    <Setting Name="GigapixelLocation"  Type="System.String" Scope="User"><Value Profile="(Default)"></Value></Setting>
+    <Setting Name="IgnoredSize"        Type="System.String" Scope="User"><Value Profile="(Default)">400*400</Value></Setting>
+    <Setting Name="IgnoredWords"       Type="System.String" Scope="User"><Value Profile="(Default)">preview</Value></Setting>
+    <Setting Name="BatchSize"          Type="System.Int32"  Scope="User"><Value Profile="(Default)">30</Value></Setting>
+    <Setting Name="PhotoAIZipLocation" Type="System.String" Scope="User"><Value Profile="(Default)"></Value></Setting>
+    <Setting Name="PhotoAIAppLocation" Type="System.String" Scope="User"><Value Profile="(Default)">C:\Program Files\Topaz Labs LLC\Topaz Photo\Topaz Photo.exe</Value></Setting>
+    <Setting Name="PhotoAIIgnoredSize" Type="System.String" Scope="User"><Value Profile="(Default)">400*400</Value></Setting>
+    <Setting Name="PhotoAIIgnoredWords" Type="System.String" Scope="User"><Value Profile="(Default)">preview</Value></Setting>
+    <Setting Name="PhotoAIBatchSize"   Type="System.Int32"  Scope="User"><Value Profile="(Default)">50</Value></Setting>
+  </Settings>
+</SettingsFile>

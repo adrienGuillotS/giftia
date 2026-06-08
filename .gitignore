@@ -1,0 +1,23 @@
+.DS_Store
+
+# Visual Studio / Rider
+.vs/
+*.user
+*.suo
+
+# .NET build outputs
+**/bin/
+**/obj/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+
+# PyInstaller
+**/build/
+**/dist/
+*.spec
+
+# Logs
+*.log

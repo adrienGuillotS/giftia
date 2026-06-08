@@ -1,0 +1,251 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Amethyst.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Bloodstone.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Diamond.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Emerald.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Garnet.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\opal.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Pearl.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Ruby.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Sapphire.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Sardonyx.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Stone Template.psd" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\topaz.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Birth Stone\Turquoise.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Certificate Files\2019\Birth Certificate.cdr" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Certificate Files\2022\Birth Certificate.cdr" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Certificate Files\Data Sheets for Keepsake.xlsx" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Certificate Files\Sunrise and sunset timming.xlsx" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Dog.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Dragon.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Goat.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Horse.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Monkey.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Ox.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Pig.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rabbit.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rat.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rooster.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Snake.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Chinese Year images\Tiger.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Aquarius.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Aries.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Cancer.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Capricorn.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Gemini.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Horoscopes Template.psd" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Leo.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Libra.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Aquarius.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Aries.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Cancer.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Capricorn.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Leo.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Libra.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Pisces.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Sagittarius.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Scorpio.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Taurus.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Virgo.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Pisces.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Sagittarius.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Scorpio.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Taurus.png" />
+		<None Remove="Resources\Birthday Certificate Designer 2023\Horoscopes\Virgo.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Amethyst.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Bloodstone.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Diamond.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Emerald.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Garnet.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\opal.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Pearl.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Ruby.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Sapphire.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Sardonyx.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Stone Template.psd">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\topaz.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Birth Stone\Turquoise.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Certificate Files\2019\Birth Certificate.cdr">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Certificate Files\2022\Birth Certificate.cdr">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Certificate Files\Data Sheets for Keepsake.xlsx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Certificate Files\Sunrise and sunset timming.xlsx">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Dog.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Dragon.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Goat.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Horse.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Monkey.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Ox.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Pig.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rabbit.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rat.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Rooster.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Snake.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Chinese Year images\Tiger.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Aquarius.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Aries.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Cancer.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Capricorn.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Gemini.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Horoscopes Template.psd">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Leo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Libra.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Aquarius.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Aries.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Cancer.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Capricorn.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Leo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Libra.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Pisces.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Sagittarius.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Scorpio.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Taurus.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Option B\Virgo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Pisces.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Sagittarius.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Scorpio.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Taurus.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="Resources\Birthday Certificate Designer 2023\Horoscopes\Virgo.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="System.Data.OleDb" Version="9.0.9" />
+	  <PackageReference Include="WindowsAPICodePack.Shell.CommonFileDialogs.Wpf" Version="1.1.5.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\DesignerSuite.Core\DesignerSuite.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Corel.Interop.VGCore">
+	    <HintPath>C:\Program Files\Corel\CorelDRAW Graphics Suite 2019\Programs64\Assemblies\Corel.Interop.VGCore.dll</HintPath>
+	    <EmbedInteropTypes>False</EmbedInteropTypes>
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Resources\Birthday Certificate Designer 2023\Chinese Year images\Template for Chinese year images.psd">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>

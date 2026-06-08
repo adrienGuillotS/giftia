@@ -1,0 +1,205 @@
+﻿<controls:MetroWindow x:Class="PSQuickDesigner.Views.CreateNewPresetView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PSQuickDesigner.Views"
+        xmlns:enums="clr-namespace:PSQuickDesigner.Enums"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner" 
+        xmlns:convertors="clr-namespace:PSQuickDesigner.Converters"
+        Loaded="Window_Loaded" ResizeMode="NoResize"
+        GlowBrush="{DynamicResource MahApps.Brushes.AccentBase}"
+        WindowTransitionsEnabled="True"
+        Title="PS Quick Designer" Height="480" MinHeight="480" MinWidth="390" Width="390">
+    <controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Import style from DesignerSuite.Core -->
+                <ResourceDictionary Source="pack://application:,,,/DesignerSuite.Core;component/Themes/PageStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <convertors:EnumToBooleanConverter x:Key="enumToBooleanConverter"/>
+        </ResourceDictionary>
+       
+    </controls:MetroWindow.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="2 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2"  Margin="0 0 0 2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="AUTO"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Content="Create New Preset" FontSize="20" Height="26" VerticalContentAlignment="Center"
+                        Grid.Row="0"  Grid.Column="0" Grid.ColumnSpan="2" Margin="0 0 0 10" Padding="0"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"  Text="Width" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="NewWidthTB" Text="{Binding Path=SelectedPreset.Width, StringFormat=N3, Mode=TwoWay, NotifyOnValidationError=True,ValidatesOnExceptions=True}"  Width="60" 
+                         Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" />
+                <ComboBox x:Name="NewUnitsCB" Grid.Row="2" Grid.Column="1" Margin="10 0 0 0" 
+                                   SelectedItem="{Binding SelectedUnit, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                   DisplayMemberPath="Name"
+                                   ItemsSource="{Binding Units, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                </ComboBox>
+
+            </Grid>
+
+            <Grid Grid.Row="3"  Margin="0 6 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="AUTO"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Height" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox x:Name="NewHeightTB" Text="{Binding Path=SelectedPreset.Height, StringFormat=N3, Mode=TwoWay, NotifyOnValidationError=True,ValidatesOnExceptions=True}"  Grid.Row="1" Grid.Column="0" Width="60" HorizontalAlignment="Left" />
+
+                <TextBlock Text="Orietation" Grid.Row="0" Grid.Column="1" Margin="10 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <StackPanel Grid.Row="1" Grid.Column="1" Margin="10 0" Orientation="Horizontal">
+                    <RadioButton x:Name="NewPortraitRB" VerticalAlignment="Stretch" VerticalContentAlignment="Center" BorderThickness="1"
+                                 IsChecked="{Binding Path=SelectedOrientation, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay,
+                        Converter={StaticResource enumToBooleanConverter}, ConverterParameter={x:Static enums:Orientation.Portrait }}">Portrait</RadioButton>
+                    <RadioButton VerticalAlignment="Stretch" Margin="10 0 0 0" VerticalContentAlignment="Center" BorderThickness="1"
+                                 IsChecked="{Binding Path=SelectedOrientation, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, 
+                        Converter={StaticResource enumToBooleanConverter}, ConverterParameter={x:Static enums:Orientation.Landscape}}">Landscape</RadioButton>
+
+                </StackPanel>
+
+                <TextBlock Text="Artboards" Grid.Row="0" Grid.Column="2" Margin="10 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <CheckBox x:Name="NewArtboardChB"  Grid.Row="1" Grid.Column="2" Margin="10 0" VerticalAlignment="Center"/>
+
+            </Grid>
+
+            <Grid Grid.Row="4"  Margin="0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="AUTO"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Resolution" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Text="{Binding Path=SelectedPreset.Resolution, Mode=TwoWay,FallbackValue='300',StringFormat=N2, NotifyOnValidationError=True,ValidatesOnExceptions=True}"  Grid.Row="1" Grid.Column="0" Width="60" HorizontalAlignment="Left" />
+                <ComboBox x:Name="NewResolutionUnitsCB" Grid.Row="1" Grid.Column="1" Margin="10 0 0 0" 
+                                   SelectedItem="{Binding SelectedResolutionUnit, Mode=TwoWay}"
+                                   DisplayMemberPath="Name"
+                                   ItemsSource="{Binding ResolutionUnits}"/>
+            </Grid>
+
+            <Grid Grid.Row="5"  Margin="0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Color Mode" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="NewColorModeCB" Grid.Row="1" Grid.Column="0" 
+     SelectedItem="{Binding SelectedColorMode, Mode=TwoWay}"
+     DisplayMemberPath="Name"
+     ItemsSource="{Binding ColorModes}"/>
+                <ComboBox x:Name="NewDepthCB" Grid.Row="1" Grid.Column="1" Margin="10 0 0 0" HorizontalAlignment="Stretch"
+     SelectedItem="{Binding SelectedDepth, Mode=TwoWay}"
+     DisplayMemberPath="Name"
+     ItemsSource="{Binding Depths}">
+                    <ComboBox.ItemContainerStyle>
+                        <Style TargetType="ComboBoxItem">
+                            <Setter Property="IsEnabled" Value="{Binding IsEnabled}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsEnabled}" Value="False">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsEnabled}" Value="True">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ComboBox.ItemContainerStyle>
+                </ComboBox>
+
+            </Grid>
+
+            <Grid Grid.Row="6"  Margin="0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Background Contents" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="NewFillCB"  Grid.Row="1" Grid.Column="0" Margin="0 0 0 0" 
+SelectedItem="{Binding SelectedFillColor, Mode=TwoWay}"
+DisplayMemberPath="Name"
+ItemsSource="{Binding FillColors}" />
+
+
+                <TextBlock Text="Pixel Aspect Ratio" Grid.Row="0" Grid.Column="1" Margin="10 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="NewScaleCB" Grid.Row="1" Grid.Column="1" Margin="10 0 0 0"   
+           SelectedItem="{Binding SelectedPixelAspectRatio, Mode=TwoWay}"
+           DisplayMemberPath="Name"
+           ItemsSource="{Binding PixelAspectRatios}"/>
+            </Grid>
+
+            <Grid Grid.Row="7"  Margin="0 6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="AUTO"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Color Profile" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="NewProfileCB" Grid.Row="1" Grid.Column="0" Margin="0 0 0 0"  
+         SelectedItem="{Binding SelectedColorProfile, Mode=TwoWay}"
+         DisplayMemberPath="Name"
+         ItemsSource="{Binding ColorProfiles}"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Margin="2 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!--<ColumnDefinition Width="*"/>
+                               <ColumnDefinition Width="auto"/>-->
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Preset Name" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"   HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox x:Name="NewPresetsTB" Grid.Row="1" Grid.Column="0"
+                     Text="{Binding SelectedPreset.Name, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=True,ValidatesOnExceptions=True}"/>
+
+            <Button x:Name="SaveNewPresetBtn" 
+                    Grid.Row="2" Grid.Column="1" Margin="0 8 0 0"
+                    Content="SAVE" Click="SaveNewPresetBtn_Click"></Button>
+        </Grid>
+    </Grid>
+</controls:MetroWindow>

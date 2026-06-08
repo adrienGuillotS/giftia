@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Temu\QuickDesigner2023\Asin Folder.csv" />
+	  <None Remove="Resources\Temu\QuickDesigner2023\Keychains.csv" />
+	  <None Remove="Resources\Temu\QuickDesigner2023\Mugs.csv" />
+	  <None Remove="Resources\Temu\QuickDesigner2023\PhoneCases.csv" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="Resources\Amazon\QuickDesigner2023\Asin Folder.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Amazon\QuickDesigner2023\Keychains.csv">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Amazon\QuickDesigner2023\Mugs.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Amazon\QuickDesigner2023\PhoneCases.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Temu\QuickDesigner2023\Asin Folder.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Temu\QuickDesigner2023\Keychains.csv">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Temu\QuickDesigner2023\Mugs.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Resources\Temu\QuickDesigner2023\PhoneCases.csv">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="CsvHelper" Version="33.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Svg" Version="3.4.7" />
+		<PackageReference Include="WindowsAPICodePack.Shell.CommonFileDialogs.Wpf" Version="1.1.5.1" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\DesignerSuite.Core\DesignerSuite.Core.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Corel.Interop.VGCore">
+	    <HintPath>C:\Program Files\Corel\CorelDRAW Graphics Suite 2019\Programs64\Assemblies\Corel.Interop.VGCore.dll</HintPath>
+	    <Private>False</Private>
+	    <EmbedInteropTypes>False</EmbedInteropTypes>
+	  </Reference>
+	</ItemGroup>
+</Project>

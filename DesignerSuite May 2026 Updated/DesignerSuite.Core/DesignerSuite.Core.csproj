@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	  <PackageReference Include="System.Data.OleDb" Version="9.0.9" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Corel.Interop.VGCore">
+	    <HintPath>C:\Program Files\Corel\CorelDRAW Graphics Suite 2019\Programs64\Assemblies\Corel.Interop.VGCore.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+</Project>

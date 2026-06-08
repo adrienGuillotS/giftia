@@ -1,0 +1,67 @@
+﻿<Page x:Class="QuickDesigner2025.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QuickDesigner2025"
+      Title="Quick Designer 2025 - Multisize Edition"
+      xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Style="{DynamicResource PageStyle}"
+      Loaded="UserControl_Loaded">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Import style from DesignerSuite.Core -->
+                <ResourceDictionary Source="pack://application:,,,/DesignerSuite.Core;component/Themes/PageStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Margin="6,6,6,6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto" MinWidth="100"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Zip Files Source Folder" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Padding="0 10 10 2" FontSize="12"/>
+        <TextBox x:Name="ZipsFolderPathTxt" Grid.Row="1" Grid.Column="0" Margin="0 0 4 0" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="ImagesBrowse" Content="Browse" Grid.Column="1" Grid.Row="1"
+             Click="ImagesBrowse_Click"/>
+
+        <Label Content="'CDR' Files Destination Folder" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Padding="0 10 10 2" FontSize="12"/>
+        <TextBox x:Name="CDRFilesLocationTxt" Grid.Row="3" Grid.Column="0"  Margin="0 0 4 0" VerticalContentAlignment="Stretch"/>
+        <Button x:Name="CDRBrowse" Content="Browse" Grid.Column="1" Grid.Row="3"
+             Click="CDRBrowse_Click"/>
+
+        <UniformGrid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+                     HorizontalAlignment="Stretch" VerticalAlignment="Center" Columns="2" Rows="1">
+            <Button x:Name="GenerateBtn" Content="Generate (Amazon)" 
+             Style="{StaticResource MahApps.Styles.Button}"
+                Click="GenerateBtn_Click"/>
+            <Button x:Name="GenerateTemuBtn" Content="Generate (Temu)"
+                Style="{StaticResource MahApps.Styles.Button}"
+                    Click="GenerateTemuBtn_Click"/>
+        </UniformGrid>
+
+
+        <mah:MetroProgressBar x:Name="Progress_Bar" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+
+
+        <Label Content="Error Console" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Padding="0 10 10 2" FontSize="12"/>
+        <RichTextBox x:Name="ErrorConsoleRichTxt" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto" Margin="0 0 0 0"/>
+    </Grid>
+
+
+</Page>

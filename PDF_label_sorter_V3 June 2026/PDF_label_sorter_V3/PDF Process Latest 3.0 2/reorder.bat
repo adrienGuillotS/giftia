@@ -1,0 +1,1 @@
+java -cp %PDF_HOME%/lib/* com.skee.pdfprocess.CliMain %*

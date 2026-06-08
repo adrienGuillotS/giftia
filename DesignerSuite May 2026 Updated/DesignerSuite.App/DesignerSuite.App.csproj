@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<AssemblyName>Quick Designer Suite 2026</AssemblyName>
+		<PackageIcon>Icon3.png</PackageIcon>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
+	<PropertyGroup>
+		<IncludeAllContentForSelfExtract>false</IncludeAllContentForSelfExtract>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<Authors>OneNine Tech</Authors>
+		<AssemblyVersion>1.0.4</AssemblyVersion>
+		<FileVersion>1.0.4</FileVersion>
+		<ApplicationIcon>Icon3.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="App Icon.ico" />
+		<None Remove="Icon.ico" />
+		<None Remove="Icon.png" />
+		<None Remove="Icon2.png" />
+		<None Remove="Icon_Transparent.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Icon3.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MahApps.Metro" Version="2.4.10" />
+		<PackageReference Include="MahApps.Metro.IconPacks" Version="6.1.0" />
+		<PackageReference Include="MahApps.Metro.IconPacks.FontAwesome" Version="6.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Modules\BirthdayCertificateDesigner2023\BirthdayCertificateDesigner2023.Module.csproj" />
+		<ProjectReference Include="..\Modules\KeychainQuickDesigner\KeychainQuickDesigner.Module.csproj" />
+		<ProjectReference Include="..\Modules\PhotoshopQuickDesigner\PhotoshopQuickDesigner.Module.csproj" />
+		<ProjectReference Include="..\Modules\QuickDesigner2023\QuickDesigner2023.Module.csproj" />
+		<ProjectReference Include="..\Modules\QuickDesigner2025\QuickDesigner2025.Module.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Icon2.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Icon3.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+		<Resource Include="Icon_Transparent.png">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Icon3.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
