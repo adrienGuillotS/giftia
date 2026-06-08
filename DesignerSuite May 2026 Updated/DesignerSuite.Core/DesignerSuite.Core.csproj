@@ -6,6 +6,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Platforms>AnyCPU;x64;x86</Platforms>
+		<CorelInteropPath>C:\Program Files\Corel\CorelDRAW Graphics Suite 2019\Programs64\Assemblies\Corel.Interop.VGCore.dll</CorelInteropPath>
+		<HasCorelInterop Condition="Exists('$(CorelInteropPath)')">true</HasCorelInterop>
+		<HasCorelInterop Condition="'$(HasCorelInterop)'==''">false</HasCorelInterop>
+		<DefineConstants>$(DefineConstants);HAS_COREL</DefineConstants>
+		<DefineConstants Condition="'$(HasCorelInterop)'!='true'">$(DefineConstants.Replace(';HAS_COREL',''))</DefineConstants>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,9 +20,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Reference Include="Corel.Interop.VGCore">
-	    <HintPath>C:\Program Files\Corel\CorelDRAW Graphics Suite 2019\Programs64\Assemblies\Corel.Interop.VGCore.dll</HintPath>
+	  <Reference Include="Corel.Interop.VGCore" Condition="'$(HasCorelInterop)'=='true'">
+	    <HintPath>$(CorelInteropPath)</HintPath>
 	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(HasCorelInterop)'!='true'">
+	  <Compile Remove="Utilities\Corel\**\*.cs" />
+	  <Compile Remove="Services\SvgImportService.cs" />
+	  <Compile Remove="Interfaces\ISvgImportService.cs" />
+	  <Compile Remove="Utilities\WrappingTextHelper.cs" />
 	</ItemGroup>
 
 </Project>

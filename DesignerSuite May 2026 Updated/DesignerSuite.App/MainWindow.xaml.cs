@@ -1,5 +1,4 @@
 ﻿using ControlzEx.Theming;
-using KeychainQuickDesigner.Module;
 using MahApps.Metro.Controls;
 using QuickDesinger2023;
 using System.Windows;

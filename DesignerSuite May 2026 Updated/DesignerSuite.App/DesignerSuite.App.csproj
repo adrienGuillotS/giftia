@@ -39,9 +39,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Modules\BirthdayCertificateDesigner2023\BirthdayCertificateDesigner2023.Module.csproj" />
-		<ProjectReference Include="..\Modules\KeychainQuickDesigner\KeychainQuickDesigner.Module.csproj" />
-		<ProjectReference Include="..\Modules\PhotoshopQuickDesigner\PhotoshopQuickDesigner.Module.csproj" />
 		<ProjectReference Include="..\Modules\QuickDesigner2023\QuickDesigner2023.Module.csproj" />
 		<ProjectReference Include="..\Modules\QuickDesigner2025\QuickDesigner2025.Module.csproj" />
 	</ItemGroup>
